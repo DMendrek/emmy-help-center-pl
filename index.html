@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrum Nápovědy Emmy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+        }
+        #sidebar {
+            width: 250px;
+            background: #f4f4f4;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
+        #content {
+            margin-left: 270px;
+            padding: 20px;
+            width: 100%;
+        }
+        .menu-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h2>Centrum Nápovědy</h2>
+        <div class="menu-item" onclick="loadContent('manual')">📖 Emmy manuál - Polsko</div>
+        <div class="menu-item" onclick="loadContent('tips')">⚙️ Tipy a triky – Jak spustit Emmy</div>
+        <div class="menu-item" onclick="loadContent('graphics')">📜 Grafické materiály</div>
+        <div class="menu-item" onclick="loadContent('voice')">🔊 Hlas Emmy</div>
+    </div>
+    <div id="content">
+        <h2>Vítejte v centru nápovědy Emmy</h2>
+        <p>Vyberte téma z levého menu.</p>
+    </div>
+    
+    <script>
+        function loadContent(section) {
+            const content = document.getElementById('content');
+            let html = '';
+            
+            switch (section) {
+                case 'manual':
+                    html = '<h2>📖 Emmy manuál - Polsko</h2><p>Obsah manuálu...</p>';
+                    break;
+                case 'tips':
+                    html = '<h2>⚙️ Tipy a triky – Jak spustit Emmy</h2><p>Obsah tipů...</p>';
+                    break;
+                case 'graphics':
+                    html = '<h2>📜 Grafické materiály</h2><p>Instrukcja dla pacjentów, Wizytówki dla pacjentów...</p>';
+                    break;
+                case 'voice':
+                    html = '<h2>🔊 Hlas Emmy</h2><p>Informace o hlasu Emmy...</p>';
+                    break;
+                default:
+                    html = '<h2>Vítejte v centru nápovědy Emmy</h2><p>Vyberte téma z levého menu.</p>';
+            }
+            
+            content.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
