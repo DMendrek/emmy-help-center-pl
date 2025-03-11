@@ -3,15 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmy manuál - Polsko</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
-        a { display: block; margin-bottom: 20px; }
+    <title>Głos Emmy</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+        }
+        #sidebar {
+            width: 280px;
+            background: #f4f4f4;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
+        #content {
+            margin-left: 300px;
+            padding: 20px;
+            width: 100%;
+        }
+        .menu-item {
+            padding: 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+        .menu-item:hover {
+            background: #ddd;
+        }
+        .menu-header {
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
-    <a href="index.html">⬅ Zpět na hlavní stránku</a>
-    <h1>📖 Emmy manuál - Polsko</h1>
-    <p>Sem vložíme obsah manuálu.</p>
+    <h1>Głos Emmy – szablon</h1>
+    
+    <h2>Przykładowe teksty (można dostosować):</h2>
+    
+    <h3>Po odebraniu połączenia pacjent jest informowany:</h3>
+    <p>„Dzień dobry, dodzwoniłeś się do <strong>[nazwa przychodni / imię i nazwisko lekarza]</strong>. Można poczekać na rozmowę telefoniczną lub złożyć zgłoszenie online na stronie <a href="https://www.mojaemmy.pl/[profil przychodni]">www.mojaemmy.pl/[profil przychodni]</a>. W nagłych przypadkach prosimy o kontakt z pogotowiem ratunkowym pod numerem <strong>999</strong> lub <strong>112</strong>. Jeśli chcesz, abym przekazała Twoją prośbę do przychodni, nie rozłączaj się ze mną.”</p>
+    
+    <h3>Poza godzinami przyjęć:</h3>
+    <p>„Dzień dobry, dodzwoniłeś się do przychodni <strong>[nazwa przychodni / imię i nazwisko lekarza]</strong>. Obecnie nie pracujemy, ale możesz wysłać nam swoje zgłoszenie za pośrednictwem aplikacji Emmy. Naszą przychodnię można znaleźć pod adresem <a href="https://www.mojaemmy.pl/[profil przychodni]">www.mojaemmy.pl/[profil przychodni]</a>. Dziękujemy i do usłyszenia.”</p>
+    
+    <h3>Pytanie: „Czy dzwonisz do nas jako pacjent?”</h3>
+    <ul>
+        <li>Włączone</li>
+        <li>Wyłączone</li>
+    </ul>
+    
+    <p>Jeśli dzwoniący nie jest pacjentem, Emmy ma możliwość utworzenia zgłoszenia pod nazwą „Połączenie biznesowe“. Takie połączenie zostanie również przekierowane do przychodni na specjalny numer, na wypadek gdyby dzwoniło laboratorium, kolega lekarz, szpital itp. Ten numer telefonu jest całkowicie niepubliczny, więc może to być również Państwa prywatny numer.</p>
+    
+    <p><strong>Numer telefonu do połączeń biznesowych:</strong></p>
+    
+    <h3>Pytanie: „Dzwonisz w swoim imieniu czy w imieniu kogoś innego?”</h3>
+    <ul>
+        <li>Włączone</li>
+        <li>Wyłączone</li>
+    </ul>
+    
+    <h3>Pytanie: „Czy jesteś naszym zarejestrowanym pacjentem?”</h3>
+    <ul>
+        <li>Włączone</li>
+        <li>Wyłączone</li>
+    </ul>
+    
+    <h3>Prośba o podanie daty urodzenia</h3>
+    <ul>
+        <li>Nigdy</li>
+        <li>Zawsze</li>
+        <li>Tylko w przypadku, gdy po zapytaniu o imię i nazwisko pacjenta Emmy nie znajdzie go w kartotece.</li>
+        <li>Tylko na wypadek, gdyby Emmy nie mogła znaleźć numeru telefonu pacjenta w kartotece.</li>
+    </ul>
+    
+    <h3>Pytanie: „Czy Twoje zgłoszenie jest pilne ze względu na poważne zagrożenie życia?”</h3>
+    <ul>
+        <li>Włączone</li>
+        <li>Wyłączone</li>
+    </ul>
+    
+    <h3>Informacja: „Jeśli stan zdrowia pogorszy się, należy ponownie zadzwonić do przychodni lub pogotowia ratunkowego pod numer 999 lub 112.”</h3>
+    <ul>
+        <li>Włączone – włączamy najczęściej u POZ</li>
+        <li>Wyłączone</li>
+    </ul>
+    
+    <h3>Nagrywanie niekompletnych połączeń</h3>
+    <ul>
+        <li>Włączone</li>
+        <li>Wyłączone</li>
+    </ul>
+    
+    <h3>Zapytanie dotyczące zwolnienia lekarskiego</h3>
+    <ul>
+        <li>Włączone – włączamy najczęściej u POZ</li>
+        <li>Wyłączone</li>
+    </ul>
+    
+    <h3>Godziny przyjęć – Godziny pracy Głosu Emmy (przykładowe)</h3>
+    <table border="1">
+        <tr>
+            <th>Dzień</th>
+            <th>Godziny</th>
+        </tr>
+        <tr>
+            <td>Poniedziałek</td>
+            <td>7:00-18:30</td>
+        </tr>
+        <tr>
+            <td>Wtorek</td>
+            <td>7:00-13:00</td>
+        </tr>
+        <tr>
+            <td>Środa</td>
+            <td>7:00-18:00</td>
+        </tr>
+        <tr>
+            <td>Czwartek</td>
+            <td>7:00-18:00</td>
+        </tr>
+        <tr>
+            <td>Piątek</td>
+            <td>7:00-13:00</td>
+        </tr>
+    </table>
 </body>
 </html>
