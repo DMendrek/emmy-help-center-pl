@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centrum Nápovědy Emmy</title>
+    <title>Centrum Pomocy MojaEmmy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
             margin: 0;
         }
         #sidebar {
-            width: 250px;
+            width: 280px;
             background: #f4f4f4;
             padding: 20px;
             height: 100vh;
@@ -19,31 +19,43 @@
             overflow-y: auto;
         }
         #content {
-            margin-left: 270px;
+            margin-left: 300px;
             padding: 20px;
             width: 100%;
         }
         .menu-item {
-            padding: 10px;
+            padding: 12px;
             cursor: pointer;
             border-bottom: 1px solid #ddd;
+            font-size: 16px;
+            display: block;
+            text-decoration: none;
+            color: black;
         }
         .menu-item:hover {
             background: #ddd;
         }
+        .menu-header {
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
- <div id="sidebar">
-    <h2>Centrum Nápovědy</h2>
-    <a href="manual.html">📖 Emmy manuál - Polsko</a>
-    <a href="tips.html">⚙️ Tipy a triky – Jak spustit Emmy</a>
-    <a href="graphics.html">📜 Grafické materiály</a>
-    <a href="voice.html">🔊 Hlas Emmy</a>
-</div>
+    <div id="sidebar">
+        <h2>Centrum Pomocy</h2>
+        <div class="menu-header">Podstawowe informacje</div>
+        <a href="#" class="menu-item" onclick="loadContent('manual')">📖 Podręcznik MojaEmmy - Polska</a>
+        <a href="#" class="menu-item" onclick="loadContent('tips')">⚙️ Wskazówki – Jak uruchomić MojaEmmy</a>
+        
+        <div class="menu-header">Materiały dodatkowe</div>
+        <a href="#" class="menu-item" onclick="loadContent('graphics')">📜 Materiały graficzne</a>
+        <a href="#" class="menu-item" onclick="loadContent('voice')">🔊 Głos MojaEmmy</a>
+    </div>
     <div id="content">
-        <h2>Vítejte v centru nápovědy Emmy</h2>
-        <p>Vyberte téma z levého menu.</p>
+        <h2>Witamy w Centrum Pomocy MojaEmmy</h2>
+        <p>Wybierz temat z lewego menu.</p>
     </div>
     
     <script>
@@ -53,19 +65,19 @@
             
             switch (section) {
                 case 'manual':
-                    html = '<h2>📖 Emmy manuál - Polsko</h2><p>Obsah manuálu...</p>';
+                    html = '<h2>📖 Podręcznik MojaEmmy - Polska</h2><p>Zawartość podręcznika...</p>';
                     break;
                 case 'tips':
-                    html = '<h2>⚙️ Tipy a triky – Jak spustit Emmy</h2><p>Obsah tipů...</p>';
+                    html = '<h2>⚙️ Wskazówki – Jak uruchomić MojaEmmy</h2><p>Zawartość wskazówek...</p>';
                     break;
                 case 'graphics':
-                    html = '<h2>📜 Grafické materiály</h2><p>Instrukcja dla pacjentów, Wizytówki dla pacjentów...</p>';
+                    html = '<h2>📜 Materiały graficzne</h2><p>Instrukcje dla pacjentów, wizytówki dla pacjentów...</p>';
                     break;
                 case 'voice':
-                    html = '<h2>🔊 Hlas Emmy</h2><p>Informace o hlasu Emmy...</p>';
+                    html = '<h2>🔊 Głos MojaEmmy</h2><p>Informacje o głosie MojaEmmy...</p>';
                     break;
                 default:
-                    html = '<h2>Vítejte v centru nápovědy Emmy</h2><p>Vyberte téma z levého menu.</p>';
+                    html = '<h2>Witamy w Centrum Pomocy MojaEmmy</h2><p>Wybierz temat z lewego menu.</p>';
             }
             
             content.innerHTML = html;
@@ -73,3 +85,4 @@
     </script>
 </body>
 </html>
+
