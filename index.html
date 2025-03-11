@@ -46,43 +46,18 @@
     <div id="sidebar">
         <h2>Centrum Pomocy</h2>
         <div class="menu-header">Podstawowe informacje</div>
-        <a href="#" class="menu-item" onclick="loadContent('manual')">📖 Podręcznik MojaEmmy - Polska</a>
-        <a href="#" class="menu-item" onclick="loadContent('tips')">⚙️ Wskazówki – Jak uruchomić MojaEmmy</a>
+        <a href="manual.html" class="menu-item">📖 Podręcznik MojaEmmy - Polska</a>
+        <a href="tips.html" class="menu-item">⚙️ Wskazówki – Jak uruchomić MojaEmmy</a>
         
         <div class="menu-header">Materiały dodatkowe</div>
-        <a href="#" class="menu-item" onclick="loadContent('graphics')">📜 Materiały graficzne</a>
-        <a href="#" class="menu-item" onclick="loadContent('voice')">🔊 Głos MojaEmmy</a>
+        <a href="graphics.html" class="menu-item">📜 Materiały graficzne</a>
+        <a href="voice.html" class="menu-item">🔊 Głos MojaEmmy</a>
     </div>
     <div id="content">
         <h2>Witamy w Centrum Pomocy MojaEmmy</h2>
         <p>Wybierz temat z lewego menu.</p>
     </div>
-    
-    <script>
-        function loadContent(section) {
-            const content = document.getElementById('content');
-            let html = '';
-            
-            switch (section) {
-                case 'manual':
-                    html = '<h2>📖 Podręcznik MojaEmmy - Polska</h2><p>Zawartość podręcznika...</p>';
-                    break;
-                case 'tips':
-                    html = '<h2>⚙️ Wskazówki – Jak uruchomić MojaEmmy</h2><p>Zawartość wskazówek...</p>';
-                    break;
-                case 'graphics':
-                    html = '<h2>📜 Materiały graficzne</h2><p>Instrukcje dla pacjentów, wizytówki dla pacjentów...</p>';
-                    break;
-                case 'voice':
-                    html = '<h2>🔊 Głos MojaEmmy</h2><p>Informacje o głosie MojaEmmy...</p>';
-                    break;
-                default:
-                    html = '<h2>Witamy w Centrum Pomocy MojaEmmy</h2><p>Wybierz temat z lewego menu.</p>';
-            }
-            
-            content.innerHTML = html;
-        }
-    </script>
 </body>
 </html>
+
 
